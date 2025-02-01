@@ -1,0 +1,47 @@
+/* Custom arrow styles with increased specificity */
+div.slick-slider .slick-prev, div.slick-slider .slick-next {
+  font-size: 0; /* Remove any text or font size */
+  color: transparent; /* Make the text invisible */
+  border: none;
+  border-radius: 50%;
+  width: 50px; /* Width of the arrow button */
+  height: 50px; /* Height of the arrow button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%; /* Center the arrows vertically */
+  transform: translateY(-50%); /* Center vertically */
+  z-index: 10; /* Ensure arrows appear on top */
+}
+
+/* Left arrow */
+div.slick-slider .slick-prev {
+  left: 5px; /* Adjust the left arrow */
+  background-image: url('/assets/left-arrow.svg'); /* Custom left arrow image */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Right arrow */
+div.slick-slider .slick-next {
+  right: 5px; /* Adjust the right arrow */
+  background-image: url('/assets/right-arrow.svg'); /* Custom right arrow image */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hover effect */
+div.slick-slider .slick-prev:hover, div.slick-slider .slick-next:hover {
+  cursor: pointer;
+  border: 3px solid #fff; /* White border on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Remove default icon text (next, prev) */
+div.slick-slider .slick-prev:before, div.slick-slider .slick-next:before {
+  content: ''; /* Remove default arrow icon text */
+  display: none; /* Ensure no text appears */
+}
